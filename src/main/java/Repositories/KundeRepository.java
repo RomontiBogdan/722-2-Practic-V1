@@ -61,7 +61,7 @@ public class KundeRepository {
             }
             else{
                 ortList.add(kunde.getOrt());
-                einkommenList.add(0);
+                einkommenList.add(kunde.getEinkommenVonKunde());
             }
         }
 

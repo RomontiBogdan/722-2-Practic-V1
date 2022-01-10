@@ -1,3 +1,3 @@
-Thurgau : 0
-Zürich : 5000
-St. Gallen : 0
+Thurgau : 38000
+Zürich : 55000
+St. Gallen : 65000

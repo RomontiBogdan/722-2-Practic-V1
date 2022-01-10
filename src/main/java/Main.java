@@ -13,9 +13,9 @@ public class Main {
         try {
             kundeList = repo.readFromFile(System.getProperty("user.dir") + "\\src\\main\\java\\Data\\kundendaten.txt", ",");
 
-            kundeList = repo.sortAnzahlMitarbeiter(kundeList);
+            //kundeList = repo.sortAnzahlMitarbeiter(kundeList);
 
-            repo.writeToFile(System.getProperty("user.dir") + "\\src\\main\\java\\Data\\kundensortiert.txt", kundeList, ",");
+            //repo.writeToFile(System.getProperty("user.dir") + "\\src\\main\\java\\Data\\kundensortiert.txt", kundeList, ",");
 
             repo.writeStatistik(System.getProperty("user.dir") + "\\src\\main\\java\\Data\\statistik.txt", kundeList);
         } catch (IOException e) {
