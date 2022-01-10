@@ -1,0 +1,3 @@
+Thurgau : 0
+Zürich : 5000
+St. Gallen : 0

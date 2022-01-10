@@ -46,4 +46,32 @@ public class KundeRepository {
         });
         return kundeList;
     }
+
+    public void writeStatistik(String fileName, List<Kunde> kundeList) throws IOException {
+        List<String> ortList = new ArrayList<>();
+        List<Integer> einkommenList = new ArrayList<>();
+        int index;
+        int sum = 0;
+
+        for(Kunde kunde : kundeList){
+            index = ortList.indexOf(kunde.getOrt());
+            if(index != -1){
+                sum = einkommenList.get(index) + kunde.getEinkommenVonKunde();
+                einkommenList.set(index, sum);
+            }
+            else{
+                ortList.add(kunde.getOrt());
+                einkommenList.add(0);
+            }
+        }
+
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName));
+        for (int i = 0; i < ortList.size(); i++) {
+            String line = ortList.get(i) + " : " + einkommenList.get(i);
+            bufferedWriter.write(line);
+            bufferedWriter.newLine();
+        }
+
+        bufferedWriter.close();
+    }
 }
